@@ -30,3 +30,29 @@ ScrollTrigger.create({
     scrub:2.5,
     pin:true,
 })
+
+
+let t3 = gsap.timeline({
+  scrollTrigger:{
+    trigger:".box",
+    scrub:4,
+    pin:true,
+    markers:true,
+    start:"top",
+    end:"top 100%"
+  }
+});
+
+t3
+ .to(".box .team1",{xPercent:100})
+ .to(".box .team2",{xPercent:-70});
+
+// ScrollTrigger.create({
+//   animation:t3,
+//   trigger:".box",
+//   scrub:2.5,
+//   pin:true,
+//   markers:true,
+//   start:"top 30%",
+//   end:"top 90%"
+// })

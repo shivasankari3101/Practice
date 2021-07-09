@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 5%;
+}
+
+.navbar img{
+    width: 400px;
+    height: 100%;
+}
+
+.section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.section1>div{
+    width:50%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text_content h1{
+    font-size: 2.5rem;
+    padding-left:10%;
+    color: rgba(252,45,38,.99);
+    font-weight: bolder;
+}
+
+.scrolling_text{
+    position: relative;
+    width: 60%;
+    height: 400px;
+}
+
+.scrolling_text>div{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.picture{
+    height: 100vh;
+    position: relative;
+}
+
+.picture>img{
+    width:60%;
+    height: 100%;
+}
+
+.scroll_images{
+    position: absolute;
+    top:36%;
+    left: 20%;
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll_images>img{
+    position: absolute;
+    top: 0;
+    width: 94%;
+    height: 100%;
+}
+
+
+.scroll_images,.scrolling_text{
+    overflow-y: hidden;
+}
+
+.section1 .slogan{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgba(252,45,38,.99);
+    font-weight:bold;
+}
+
+
+
+@media screen and (max-width:768px){
+    .navbar img{
+        width: 250px;
+        height: 80%;
+    }
+
+    .section1{
+        flex-direction:column;
+        height: 100vh;
+    }
+
+    .section1>div{
+        width: 100%;
+        height: 50vh;
+        min-height: 50vh;
+    }
+
+    .text_content h1{
+        font-size: 1.5rem;
+    }
+
+    .scroll_images{
+        height: 40vh;
+    }
+
+    .scrolling_text{
+        width: 90%;
+        height: 40vh;
+    }
+
+    .scrolling_text>div{
+        font-size: 0.9rem;
+    }
+}
