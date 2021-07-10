@@ -25,5 +25,24 @@ ScrollTrigger.create({
 })
 
 
+const t2 = gsap.timeline();
+
+t2.to(".ring_box img",{rotation:45},"same1")
+  .fromTo(".p1", {yPercent:0},{yPercent:-100},"same1")
+  .to(".ring_box img",{rotation:90},"same2")
+  .fromTo(".p2", {yPercent:100},{yPercent:-100},"same2")
+  .to(".ring_box img",{rotation:120},"same3")
+  .fromTo(".p3", {yPercent:100},{yPercent:0},"same3")
+  .addLabel("same1")
+  .addLabel("same2")
+  .addLabel("same3");
+
+ScrollTrigger.create({
+  animation:t2,
+  trigger:".ring_box",
+  scrub:true,
+  pin:true
+})
+
 
   
