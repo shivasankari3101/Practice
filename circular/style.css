@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
@@ -54,8 +54,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    font-size: 1.5rem;
-    font-weight: bolder;
+    font-size: 1.2rem;
 }
 
 .picture{
@@ -104,6 +103,29 @@ body{
     font-weight:bold;
 }
 
+.slogan_container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.slogan_container>h1{
+    position: absolute;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(94deg,hsla(0,0%,100%,0),#fff 10%,#fff 90%,hsla(0,0%,100%,0));
+    height: 10vh;
+}
+
 
 
 @media screen and (max-width:768px){
@@ -124,7 +146,7 @@ body{
     }
 
     .text_content h1{
-        font-size: 1.5rem;
+        font-size: 1.12rem;
     }
 
     .scroll_images{
@@ -137,6 +159,10 @@ body{
     }
 
     .scrolling_text>div{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+    }
+
+    .slogan_container,.overlay{
+        height: 50vh;
     }
 }

@@ -13,11 +13,17 @@ t1.fromTo(".text1",{yPercent:0},{yPercent:-100},"same1")
   .fromTo(".img4",{yPercent:100},{yPercent:-100},"same4")
   .addLabel("same4")
   .from(".slogan",{yPercent:100})
+  .fromTo(".overlay",{xPercent:10},{xPercent:100});
 
 
-  ScrollTrigger.create({
+
+ScrollTrigger.create({
     animation:t1,
     trigger:".section1",
     scrub:true,
     pin:true
 })
+
+
+
+  
