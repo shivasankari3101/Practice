@@ -61,6 +61,5 @@ ScrollTrigger.create({
     animation: t3,
     trigger: "#stairs",
     scrub: 4,
-    pin: true,
-    markers: true
+    pin: true
 });
