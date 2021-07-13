@@ -78,7 +78,36 @@ ScrollTrigger.create({
     trigger: ".mobiles",
     scrub: 3,
     pin: true,
-    markers: true,
     start: "top center",
     end: "top center"
 });
+
+
+const feature_texts = gsap.utils.toArray(' .feature_text');
+
+feature_texts.forEach((feature, i) => {
+    gsap.to(feature, {
+        scrollTrigger: {
+            trigger: feature,
+            scrub: 1,
+            start: "center center",
+            end: "center center",
+        },
+        yPercent: -20
+    })
+})
+
+const features = gsap.utils.toArray(".feature");
+
+features.forEach((feature, i) => {
+    gsap.from(feature, {
+        scrollTrigger: {
+            trigger: feature,
+            scrub: 3,
+            start: "top center",
+            end: "top center",
+        },
+        opacity: 0,
+        scale: 0.95
+    })
+})
