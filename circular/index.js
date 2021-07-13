@@ -63,3 +63,22 @@ ScrollTrigger.create({
     scrub: 4,
     pin: true
 });
+
+
+const t4 = gsap.timeline();
+
+t4.to(".mobile1", { x: -70 }, "same")
+    .to(".mobile2", { x: 0 }, "same")
+    .to(".mobile3", { x: 70 }, "same")
+    .addLabel("same");
+
+
+ScrollTrigger.create({
+    animation: t4,
+    trigger: ".mobiles",
+    scrub: 3,
+    pin: true,
+    markers: true,
+    start: "top center",
+    end: "top center"
+});
