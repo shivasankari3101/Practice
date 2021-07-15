@@ -1,0 +1,16 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    background-image: url("https://www.popsci.com/uploads/2019/03/18/6SMFWFTGOESH2VBC2U3WVVSLN4.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    -webkit-mask-image: url(./images/accurest_a.svg);
+    -webkit-mask-size: 100vmin;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
