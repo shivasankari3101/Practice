@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 body,
 html {
     margin: 0;
     padding: 0;
+    font-family: 'DM Serif Display', serif;
 }
 
-.home {
+.home_header {
+    position: relative;
+}
+
+.home_section1 {
     background-image: url("./images/home_bg.png");
     background-position: center;
     background-size: cover;
@@ -14,4 +20,49 @@ html {
     -webkit-mask-size: 30%;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: 100% 20%;
+}
+
+.home_text {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5%;
+    font-size: 1.5rem;
+}
+
+.home_text span {
+    color: #004AB4;
+}
+
+.services {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 74, 180, 0.9);
+    color: #fff;
+}
+
+.services>div {
+    width: 50%;
+}
+
+.service_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width:768px) {
+    .home_text {
+        position: relative;
+        width: 100%;
+    }
 }
