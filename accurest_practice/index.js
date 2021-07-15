@@ -1,10 +1,10 @@
 var tween1 = gsap.fromTo(".home", {
     WebkitMaskPosition: "90%",
-    WebkitMaskSize: "30%",
+    WebkitMaskSize: "50%",
     duration: 5
 }, {
-    WebkitMaskPosition: "30%",
-    WebkitMaskSize: "500%",
+    WebkitMaskPosition: "70%",
+    WebkitMaskSize: "2000%",
     duration: 10
 });
 

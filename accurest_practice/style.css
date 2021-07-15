@@ -5,12 +5,13 @@ html {
 }
 
 .home {
-    background-image: url("https://www.popsci.com/uploads/2019/03/18/6SMFWFTGOESH2VBC2U3WVVSLN4.jpg");
+    background-image: url("./images/home_bg.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     -webkit-mask-image: url(https://shivasankari3101.github.io/Practice/accurest_practice/images/accurest_a.svg);
     -webkit-mask-size: 30%;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: 90%;
+    -webkit-mask-position: 100% 20%;
 }
