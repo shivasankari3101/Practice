@@ -9,8 +9,8 @@ html {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    -webkit-mask-image: url(./images/accurest_a.svg);
-    -webkit-mask-size: 100vmin;
+    -webkit-mask-image: url(https://shivasankari3101.github.io/Practice/accurest_practice/images/accurest_a.svg);
+    -webkit-mask-size: 30%;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
+    -webkit-mask-position: 90%;
 }
