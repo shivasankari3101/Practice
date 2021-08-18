@@ -73,6 +73,29 @@ h6 {
     font-size: 3rem;
 }
 
+.home .omnyk_working .omnyk_working_container {
+    position: relative;
+}
+
+.home .omnyk_working .omnyk-working-carousel {
+    position: relative;
+}
+
+.home .omnyk_working .omnyk_working_container>img {
+    position: absolute;
+    z-index: 2;
+}
+
+.home .omnyk_working .omnyk_working_container>img#right_slider {
+    bottom: 50%;
+    left: 66%;
+}
+
+.home .omnyk_working .omnyk_working_container>img#left_slider {
+    left: 32%;
+    top: 10%;
+}
+
 .home .omnyk_working .omnyk-working-carousel .item {
     display: grid;
     grid-template-rows: 60% 40%;
@@ -122,6 +145,7 @@ h6 {
     width: 45%;
 }
 
+.home .omnyk_working .omnyk-working-carousel .owl-stage-outer,
 .home .omnyk_stories .omnyk_stories_carousel .owl-stage-outer {
     min-height: 450px;
     display: grid;
@@ -188,11 +212,6 @@ footer .footer_section2 .copywright a {
 }
 
 @media screen and (max-width:768px) {
-    .home .omnyk_working .omnyk-working-carousel .item {
-        display: grid;
-        grid-template-rows: 70% 30%;
-        align-items: center;
-    }
     .home .picture_gallery .column {
         -ms-flex: 50%;
         /* IE10 */
@@ -206,12 +225,39 @@ footer .footer_section2 .copywright a {
     .home .picture_gallery .image {
         padding: 5%;
     }
+    .home .omnyk_working {
+        padding: 0;
+    }
+    .home .omnyk_working h1,
+    .home .omnyk_working p {
+        padding: 0 10%;
+    }
+    .home .omnyk_working .omnyk_working_container>img#right_slider {
+        top: 30%;
+        right: 10px;
+        left: auto;
+        bottom: auto;
+        cursor: pointer;
+    }
+    .home .omnyk_working .omnyk_working_container>img#left_slider {
+        top: 30%;
+        bottom: auto;
+        left: 10px;
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
+    .home .omnyk_working .omnyk-working-carousel .item {
+        display: grid;
+        grid-template-rows: 70% 30%;
+        align-items: center;
+    }
     .home .omnyk_stories {
         padding: 0 1%;
     }
     .home .omnyk_stories>p {
         display: none;
     }
+    .home .omnyk_working .omnyk-working-carousel .owl-stage-outer,
     .home .omnyk_stories .omnyk_stories_carousel .owl-stage-outer {
         min-height: 550px;
     }

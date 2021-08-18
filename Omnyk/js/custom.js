@@ -8,7 +8,9 @@ $('.omnyk_stories_carousel').owlCarousel({
     autoplayHoverPause: true
 })
 
-$('.omnyk-working-carousel').owlCarousel({
+var omnyk_working_carousel = $('.omnyk-working-carousel');
+
+omnyk_working_carousel.owlCarousel({
     autoplay: true,
     autoplayTimeout: 3000,
     autoplaySpeed: 3000,
@@ -16,11 +18,20 @@ $('.omnyk-working-carousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            margin: 2
+            margin: 2,
+            loop: true
         },
         768: {
             items: 3,
             margin: 30
         }
     }
+})
+
+$('#left_slider').click(function() {
+    omnyk_working_carousel.trigger('prev.owl.carousel', [1000]);
+})
+
+$('#right_slider').click(function() {
+    omnyk_working_carousel.trigger('next.owl.carousel', [1000]);
 })
