@@ -9,12 +9,12 @@
 // t1.fromTo(".overlay", { yPercent: 100 }, { yPercent: 0 }, "same1")
 
 
-const features = gsap.utils.toArray(".image");
+const images = gsap.utils.toArray(".image");
 
-features.forEach((feature, i) => {
-    gsap.from(feature, {
+images.forEach((image, i) => {
+    gsap.from(image, {
         scrollTrigger: {
-            trigger: feature,
+            trigger: image,
             scrub: 3,
             start: "top center",
             end: "top center",
@@ -23,4 +23,15 @@ features.forEach((feature, i) => {
         scale: 0.95,
         yPercent: -20
     })
+})
+
+
+gsap.from(".omnyk_stories", {
+    scrollTrigger: {
+        trigger: ".omnyk_stories",
+        scrub: 3,
+        start: "top center",
+        end: "top center",
+    },
+    opacity: 0
 })
