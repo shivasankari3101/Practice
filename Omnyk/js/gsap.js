@@ -35,3 +35,27 @@ gsap.from(".omnyk_stories", {
     },
     opacity: 0
 })
+
+
+console.clear();
+
+const video = document.querySelector("#video");
+
+if (video.readyState > 3) {
+    init();
+} else {
+    video.addEventListener("canplaythrough", init);
+}
+
+function init() {
+    video.removeEventListener("canplaythrough", init);
+
+    gsap.to(video, {
+        currentTime: video.duration,
+        scrollTrigger: {
+            trigger: ".header",
+            scrub: 3,
+            pin: true
+        }
+    });
+}

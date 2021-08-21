@@ -23,10 +23,25 @@ h6 {
 }
 
 header {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3%;
+    z-index: 10;
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+}
+
+#video {
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 header nav {
