@@ -54,7 +54,7 @@ function init() {
         currentTime: video.duration,
         scrollTrigger: {
             trigger: ".header",
-            scrub: 3,
+            scrub: 1,
             pin: true
         }
     });
