@@ -7,7 +7,7 @@ context.fillStyle = "red";
 context.fill();
 const frameCount = 115;
 const currentFrame = index => (
-    `C:/Users/Paramesh/Downloads/Gsap_example/apple-airpods-pro-animation-final-demo/dist/images/Smart Ring/Ring on Finger/SmartRingIntoFinger.${index}.png`
+    `images/Smart Ring/Ring on Finger/SmartRingIntoFinger.${index}.png`
 )
 
 const preloadImages = () => {
