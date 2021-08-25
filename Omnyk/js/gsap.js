@@ -1,17 +1,7 @@
-// const t1 = gsap.timeline();
-// ScrollTrigger.create({
-//     animation: t1,
-//     trigger: ".picture_gallery",
-//     scrub: true,
-//     pin: true
-// })
+//Image gallery animation
+const images3 = gsap.utils.toArray(".image");
 
-// t1.fromTo(".overlay", { yPercent: 100 }, { yPercent: 0 }, "same1")
-
-
-const images1 = gsap.utils.toArray(".image");
-
-images1.forEach((image, i) => {
+images3.forEach((image, i) => {
     gsap.from(image, {
         scrollTrigger: {
             trigger: image,
@@ -37,27 +27,7 @@ gsap.from(".omnyk_stories", {
 })
 
 
-// const video = document.querySelector("#video");
-
-// if (video.readyState > 1) {
-//     init();
-// } else {
-//     video.addEventListener("canplaythrough", init);
-// }
-
-// function init() {
-//     video.removeEventListener("canplaythrough", init);
-
-//     gsap.to(video, {
-//         currentTime: video.duration,
-//         scrollTrigger: {
-//             trigger: ".header",
-//             scrub: 1,
-//             pin: true
-//         }
-//     });
-// }
-
+//Canvas for finger animation
 
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
@@ -81,21 +51,66 @@ for (let i = 0; i < frameCount; i++) {
     images.push(img);
 }
 
-gsap.to(finger_imgs, {
-    frame: frameCount - 1,
-    snap: "frame",
-    scrollTrigger: {
-        scrub: 1,
-        trigger: ".animation_container",
-        pin: true
 
-    },
-    onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
-});
+//Canvas for Zoomed ring animation
 
+const canvas1 = document.getElementById("ring_zoom");
+const context1 = canvas1.getContext("2d");
+
+canvas1.width = 1158;
+canvas1.height = 770;
+
+const frameCount1 = 120;
+const currentFrame1 = index => (
+    `./images/Smart Ring/Ring Rotate Zoom In/SmartRingRotateZoom${(index).toString().padStart(3, '0')}.png`
+);
+
+const images1 = []
+const finger_imgs1 = {
+    frame: 0
+};
+
+for (let i = 0; i < frameCount1; i++) {
+    const img = new Image();
+    img.src = currentFrame1(i);
+    images1.push(img);
+}
+
+//Header  animation
+gsap.timeline({
+        scrollTrigger: {
+            scrub: true,
+            pin: ".header_sections",
+            markers: "true",
+            start: "top top",
+            end: document.getElementsByClassName("header_sections")[0].offsetHeight * 3
+        }
+    })
+    .to(finger_imgs1, {
+        frame: frameCount1 - 1,
+        snap: "frame",
+        onUpdate: render1,
+    }, "same")
+    .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
+    .fromTo(".section1 img", { yPercent: 100 }, { yPercent: 0 })
+    .addLabel("same")
+    .to(finger_imgs, {
+        frame: frameCount - 1,
+        snap: "frame",
+        onUpdate: render
+    });
+
+// Functions on scroll trigger update
 images[0].onload = render;
 
 function render() {
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(images[finger_imgs.frame], 0, 0, canvas.width, canvas.height);
+}
+
+images1[0].onload = render1;
+
+function render1() {
+    context1.clearRect(0, 0, canvas1.width, canvas1.height);
+    context1.drawImage(images1[finger_imgs1.frame], 0, 0, canvas1.width, canvas1.height);
 }

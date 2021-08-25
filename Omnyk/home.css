@@ -22,14 +22,20 @@ h6 {
     box-sizing: border-box;
 }
 
-.animation_container {
+.animation_container,
+.header_animation {
     height: 100vh;
     background: #81C103;
     position: relative;
 }
 
-canvas {
-    position: sticky;
+.header_animation {
+    background-color: #fff;
+}
+
+#hero-lightpass,
+#ring_zoom {
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -38,7 +44,7 @@ canvas {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +55,39 @@ header {
 
 .header {
     position: relative;
+}
+
+.section1 {
     height: 100vh;
+    position: relative;
+}
+
+.section1 .text_content,
+.section1 img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.section1 img {
+    background-color: #fff;
+}
+
+.section1 .text_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section1 .text_content h1 {
+    color: #81C103;
+    font-size: 4rem;
+    width: 60%;
 }
 
 #video {
