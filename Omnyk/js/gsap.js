@@ -67,7 +67,7 @@ canvas.height = 770;
 
 const frameCount = 115;
 const currentFrame = index => (
-    `../dist/images/Smart Ring/Ring on Finger/SmartRingIntoFinger.${index+1}.png`
+    `./images/Smart Ring/Ring on Finger/SmartRingIntoFinger.${index+1}.png`
 );
 
 const images = []
