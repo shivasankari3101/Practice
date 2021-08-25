@@ -22,6 +22,21 @@ h6 {
     box-sizing: border-box;
 }
 
+.animation_container {
+    height: 100vh;
+    background: #81C103;
+    position: relative;
+}
+
+canvas {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
 header {
     position: absolute;
     display: flex;

@@ -9,9 +9,9 @@
 // t1.fromTo(".overlay", { yPercent: 100 }, { yPercent: 0 }, "same1")
 
 
-const images = gsap.utils.toArray(".image");
+const images1 = gsap.utils.toArray(".image");
 
-images.forEach((image, i) => {
+images1.forEach((image, i) => {
     gsap.from(image, {
         scrollTrigger: {
             trigger: image,
@@ -37,23 +37,65 @@ gsap.from(".omnyk_stories", {
 })
 
 
-const video = document.querySelector("#video");
+// const video = document.querySelector("#video");
 
-if (video.readyState > 3) {
-    init();
-} else {
-    video.addEventListener("canplaythrough", init);
+// if (video.readyState > 1) {
+//     init();
+// } else {
+//     video.addEventListener("canplaythrough", init);
+// }
+
+// function init() {
+//     video.removeEventListener("canplaythrough", init);
+
+//     gsap.to(video, {
+//         currentTime: video.duration,
+//         scrollTrigger: {
+//             trigger: ".header",
+//             scrub: 1,
+//             pin: true
+//         }
+//     });
+// }
+
+
+const canvas = document.getElementById("hero-lightpass");
+const context = canvas.getContext("2d");
+
+canvas.width = 1158;
+canvas.height = 770;
+
+const frameCount = 115;
+const currentFrame = index => (
+    `C:/Users/Paramesh/Desktop/Drawww Media/Practice/dist/images/Smart Ring/Ring on Finger/SmartRingIntoFinger.${index+1}.png`
+);
+
+const images = []
+const finger_imgs = {
+    frame: 0
+};
+
+for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    images.push(img);
 }
 
-function init() {
-    video.removeEventListener("canplaythrough", init);
+gsap.to(finger_imgs, {
+    frame: frameCount - 1,
+    snap: "frame",
+    scrollTrigger: {
+        scrub: 1,
+        trigger: ".animation_container",
+        pin: true
 
-    gsap.to(video, {
-        currentTime: video.duration,
-        scrollTrigger: {
-            trigger: ".header",
-            scrub: 1,
-            pin: true
-        }
-    });
+    },
+    onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
+});
+
+images[0].onload = render;
+
+function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[finger_imgs.frame], 0, 0, canvas.width, canvas.height);
 }
