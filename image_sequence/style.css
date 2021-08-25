@@ -1,0 +1,17 @@
+#container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #91D40B;
+    height: 100vh;
+}
+
+.animated {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #91D40B;
+}

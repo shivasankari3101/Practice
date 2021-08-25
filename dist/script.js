@@ -1,4 +1,4 @@
-const html = document.documentElement;
+const html = document.getElementsByClassName("finger_section")[0];
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
@@ -14,7 +14,6 @@ const preloadImages = () => {
     for (let i = 1; i < frameCount; i++) {
         const img = new Image();
         img.src = currentFrame(i);
-        console.log(currentFrame(i));
     }
 };
 
@@ -29,6 +28,7 @@ img.onload = function() {
 const updateImage = index => {
     img.src = currentFrame(index);
     context.drawImage(img, 0, 0);
+    console.log(currentFrame(index));
 }
 
 window.addEventListener('scroll', () => {
@@ -39,6 +39,10 @@ window.addEventListener('scroll', () => {
         frameCount - 1,
         Math.ceil(scrollFraction * frameCount)
     );
+    console.log(scrollTop);
+    console.log(maxScrollTop);
+    console.log(scrollFraction);
+    console.log(frameIndex);
     context.clearRect(0, 0, canvas.width, canvas.height);
     requestAnimationFrame(() => updateImage(frameIndex + 1))
 });

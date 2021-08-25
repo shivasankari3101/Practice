@@ -37,8 +37,6 @@ gsap.from(".omnyk_stories", {
 })
 
 
-console.clear();
-
 const video = document.querySelector("#video");
 
 if (video.readyState > 3) {
