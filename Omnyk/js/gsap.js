@@ -15,7 +15,7 @@ images3.forEach((image, i) => {
     })
 })
 
-
+//Fade in animation of Omnyk stories
 gsap.from(".omnyk_stories", {
     scrollTrigger: {
         trigger: ".omnyk_stories",
@@ -76,32 +76,10 @@ for (let i = 0; i < frameCount1; i++) {
     images1.push(img);
 }
 
-//Header  animation
-gsap.timeline({
-        scrollTrigger: {
-            scrub: true,
-            trigger: ".section1",
-            pin: ".section1",
-            start: "top top",
-            end: "bottom bottom",
-            endTrigger: second_animation
-                // markers: true
-        }
-    })
-    .to(finger_imgs1, {
-        frame: frameCount1 - 1,
-        snap: "frame",
-        onUpdate: render1,
-    }, "same")
-    .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
-    .fromTo(".section1 img", { yPercent: 100 }, { yPercent: 0 })
-    .addLabel("same")
-
-
+// Ring on finger animation
 function second_animation() {
     gsap.timeline({
             scrollTrigger: {
-                markers: true,
                 trigger: ".section2",
                 pin: ".section2",
                 scrub: 1,
@@ -115,6 +93,29 @@ function second_animation() {
             onUpdate: render
         });
 }
+
+//Header  animation
+gsap.timeline({
+        scrollTrigger: {
+            scrub: true,
+            trigger: ".section1",
+            pin: ".section1",
+            start: "top top",
+            end: "bottom bottom",
+            endTrigger: second_animation
+        }
+    })
+    .to(finger_imgs1, {
+        frame: frameCount1 - 1,
+        snap: "frame",
+        onUpdate: render1,
+    }, "same")
+    .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
+    .fromTo(".section1 img", { yPercent: 100 }, { yPercent: 0 })
+    .addLabel("same");
+
+
+
 
 // Functions on scroll trigger update
 images[0].onload = render;
