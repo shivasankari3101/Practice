@@ -35,3 +35,7 @@ $('#left_slider').click(function() {
 $('#right_slider').click(function() {
     omnyk_working_carousel.trigger('next.owl.carousel', [1000]);
 })
+
+$(window).on('load', function() {
+    $('#loader').css("display", "none");
+});
