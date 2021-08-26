@@ -80,10 +80,12 @@ for (let i = 0; i < frameCount1; i++) {
 gsap.timeline({
         scrollTrigger: {
             scrub: true,
-            pin: ".header_sections",
-            markers: "true",
+            trigger: ".section1",
+            pin: ".section1",
             start: "top top",
-            end: document.getElementsByClassName("header_sections")[0].offsetHeight * 3
+            end: "bottom bottom",
+            endTrigger: second_animation
+                // markers: true
         }
     })
     .to(finger_imgs1, {
@@ -94,11 +96,25 @@ gsap.timeline({
     .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
     .fromTo(".section1 img", { yPercent: 100 }, { yPercent: 0 })
     .addLabel("same")
-    .to(finger_imgs, {
-        frame: frameCount - 1,
-        snap: "frame",
-        onUpdate: render
-    });
+
+
+function second_animation() {
+    gsap.timeline({
+            scrollTrigger: {
+                markers: true,
+                trigger: ".section2",
+                pin: ".section2",
+                scrub: 1,
+                start: "top top"
+
+            }
+        })
+        .to(finger_imgs, {
+            frame: frameCount - 1,
+            snap: "frame",
+            onUpdate: render
+        });
+}
 
 // Functions on scroll trigger update
 images[0].onload = render;
