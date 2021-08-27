@@ -1,0 +1,46 @@
+<svg width="1440" height="979" viewBox="0 0 1440 979" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1440" height="979" fill="url(#paint0_linear)"/>
+<g opacity="0.75">
+<path d="M1440 26.1199H0V26.6622H1440V26.1199Z" fill="#C0E081"/>
+<path d="M1440 76.9705H0V77.5128H1440V76.9705Z" fill="#C0E081"/>
+<path d="M1440 128.125H0V128.667H1440V128.125Z" fill="#C0E081"/>
+<path d="M1440 179.28H0V179.822H1440V179.28Z" fill="#C0E081"/>
+<path d="M1440 230.434H0V230.976H1440V230.434Z" fill="#C0E081"/>
+<path d="M1440 281.588H0V282.131H1440V281.588Z" fill="#C0E081"/>
+<path d="M1440 332.743H0V333.286H1440V332.743Z" fill="#C0E081"/>
+<path d="M1440 383.593H0V384.136H1440V383.593Z" fill="#C0E081"/>
+<path d="M1440 434.748H0V435.29H1440V434.748Z" fill="#C0E081"/>
+<path d="M1440 485.902H0V486.445H1440V485.902Z" fill="#C0E081"/>
+<path d="M1440 537.057H0V537.6H1440V537.057Z" fill="#C0E081"/>
+<path d="M1440 588.212H0V588.754H1440V588.212Z" fill="#C0E081"/>
+<path d="M1440 639.366H0V639.909H1440V639.366Z" fill="#C0E081"/>
+<path d="M58.8507 0H58.0056V663.837H58.8507V0Z" fill="#C0E081"/>
+<path d="M140.992 0H140.146V663.837H140.992V0Z" fill="#C0E081"/>
+<path d="M223.166 0H222.321V663.837H223.166V0Z" fill="#C0E081"/>
+<path d="M305.341 0H304.496V663.837H305.341V0Z" fill="#C0E081"/>
+<path d="M387.482 0H386.637V663.837H387.482V0Z" fill="#C0E081"/>
+<path d="M469.656 0H468.811V663.837H469.656V0Z" fill="#C0E081"/>
+<path d="M551.831 0H550.986V663.837H551.831V0Z" fill="#C0E081"/>
+<path d="M633.972 0H633.127V663.837H633.972V0Z" fill="#C0E081"/>
+<path d="M716.18 0H715.335V663.837H716.18V0Z" fill="#C0E081"/>
+<path d="M798.321 0H797.476V663.837H798.321V0Z" fill="#C0E081"/>
+<path d="M880.496 0H879.651V663.837H880.496V0Z" fill="#C0E081"/>
+<path d="M962.67 0H961.825V663.837H962.67V0Z" fill="#C0E081"/>
+<path d="M1044.81 0H1043.97V663.837H1044.81V0Z" fill="#C0E081"/>
+<path d="M1126.99 0H1126.14V663.837H1126.99V0Z" fill="#C0E081"/>
+<path d="M1209.16 0H1208.32V663.837H1209.16V0Z" fill="#C0E081"/>
+<path d="M1291.3 0H1290.46V663.837H1291.3V0Z" fill="#C0E081"/>
+<path d="M1374.79 0H1373.95V663.837H1374.79V0Z" fill="#C0E081"/>
+</g>
+<rect x="1440" y="979" width="1440" height="979" transform="rotate(-180 1440 979)" fill="url(#paint1_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="720" y1="0" x2="720" y2="979" gradientUnits="userSpaceOnUse">
+<stop stop-color="#91D50B"/>
+<stop offset="1" stop-color="#81C103"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="2157.97" y1="614.228" x2="2160.7" y2="1958" gradientUnits="userSpaceOnUse">
+<stop offset="0.541667" stop-color="#81C103"/>
+<stop offset="1" stop-color="#81C103" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
