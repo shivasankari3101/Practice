@@ -85,7 +85,7 @@ gsap.timeline({
     }, "same")
     .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
     .to(".header_animation", { opacity: 0 })
-    .fromTo(".section1 img", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1 })
+    .fromTo(".section1 img", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 0.8 })
     .to("header", { yPercent: -100 })
 
 
