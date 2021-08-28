@@ -72,6 +72,30 @@ for (let i = 0; i < frameCount2; i++) {
     images2.push(img);
 }
 
+
+// Functions on scroll trigger update
+images[0].onload = render;
+
+function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[finger_imgs.frame], 0, 0, canvas.width, canvas.height);
+}
+
+images1[0].onload = render1;
+
+function render1() {
+    context1.clearRect(0, 0, canvas1.width, canvas1.height);
+    context1.drawImage(images1[finger_imgs1.frame], 0, 0, canvas1.width, canvas1.height);
+}
+
+images2[0].onload = render2;
+
+function render2() {
+    context2.clearRect(0, 0, canvas1.width, canvas1.height);
+    context2.drawImage(images2[finger_imgs2.frame], 0, 0, canvas2.width, canvas2.height);
+}
+
+
 //Header  animation
 gsap.timeline({
         scrollTrigger: {
@@ -116,31 +140,9 @@ function second_animation() {
 }
 
 
-// Functions on scroll trigger update
-images[0].onload = render;
-
-function render() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[finger_imgs.frame], 0, 0, canvas.width, canvas.height);
-}
-
-images1[0].onload = render1;
-
-function render1() {
-    context1.clearRect(0, 0, canvas1.width, canvas1.height);
-    context1.drawImage(images1[finger_imgs1.frame], 0, 0, canvas1.width, canvas1.height);
-}
-
-images2[0].onload = render2;
-
-function render2() {
-    context2.clearRect(0, 0, canvas1.width, canvas1.height);
-    context2.drawImage(images2[finger_imgs2.frame], 0, 0, canvas2.width, canvas2.height);
-}
-
-
+//Image gallery animation
 function gallery_animation() {
-    //Image gallery animation
+
     const images3 = gsap.utils.toArray(".image");
 
     images3.forEach((image, i) => {
@@ -160,9 +162,9 @@ function gallery_animation() {
 }
 
 
-
+//Fade in animation of Omnyk stories
 function omnyk_stories() {
-    //Fade in animation of Omnyk stories
+
     gsap.from(".omnyk_stories", {
         scrollTrigger: {
             trigger: ".omnyk_stories",
@@ -223,8 +225,6 @@ gsap.timeline({
         snap: "frame",
         onUpdate: render2
     })
-
-
 
 
 gallery_animation();
