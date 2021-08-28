@@ -90,7 +90,7 @@ header nav a {
     background-color: #fff;
 }
 
-.home .section2 .finger_animation {
+.home .section2 {
     background-image: url(./images/finger_animation_bg.svg);
 }
 
@@ -631,10 +631,19 @@ footer .footer_section2 .copywright a {
         width: 80%;
     }
     /*Section 2*/
+    .home .section2 {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .home .section2 .finger_animation {
+        height: 50%;
+    }
     .home .section2 .translate_text {
         width: 100%;
         padding: 3%;
         left: 0;
+        font-size: 1.1rem;
     }
     /* Section 3 */
     .home .section3 {
@@ -659,21 +668,12 @@ footer .footer_section2 .copywright a {
     .home .section5>div {
         width: 100%;
     }
-    .home .section5 .options .option {
-        cursor: none;
-    }
-    .home .section5 .options .active_option {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
     .home .section5 .options .option .popover {
         top: -200%;
         left: 10%;
     }
-    .home .section5 .options .option .close_popover {
-        display: none !important;
-    }
-    .home .section5 .options .option .popover i {
-        display: block;
+    .home .section5 .picture img {
+        height: auto;
     }
     /* Section 6 */
     .home .section6 {
@@ -731,6 +731,7 @@ footer .footer_section2 .copywright a {
         display: grid;
         grid-template-rows: 70% 30%;
         align-items: center;
+        padding: 10%;
     }
     /* Carousel of Omnyk stories */
     .home .omnyk_stories {

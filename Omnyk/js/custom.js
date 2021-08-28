@@ -39,14 +39,3 @@ $('#right_slider').click(function() {
 $(window).on('load', function() {
     $('#loader').css("display", "none");
 });
-
-
-
-
-var pop_overs = document.getElementsByClassName("popover");
-$(".option i").each(function(index) {
-    $(this).on("click", function() {
-        pop_overs[index].classList.toggle("close_popover");
-        console.log("button clicked")
-    });
-});
