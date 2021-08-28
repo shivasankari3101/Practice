@@ -125,17 +125,36 @@ function second_animation() {
         scrollTrigger: {
             trigger: ".section2",
             pin: ".section2",
-            scrub: true,
+            scrub: 1,
             start: "top top"
 
         },
         ease: "circ.out"
     });
-    t2.to(finger_imgs, {
+    t2.to(finger_imgs, 20, {
         frame: frameCount - 1,
         snap: "frame",
         onUpdate: render
-    }, "same1")
+    });
+
+    const section2_translate_texts = gsap.utils.toArray(".section2 .translate_text p");
+
+    section2_translate_texts.forEach((translate_text, i) => {
+        t2.from(translate_text, 2, {
+                opacity: 0,
+                yPercent: 100
+            })
+            .to(translate_text, 5, {
+                opacity: 1,
+                yPercent: 0
+            })
+        if (i < 2) {
+            t2.to(translate_text, 2, {
+                yPercent: -100,
+                opacity: 0
+            })
+        }
+    })
 
 }
 
@@ -227,4 +246,4 @@ gsap.timeline({
     })
 
 
-gallery_animation();
+gallery_animation()
