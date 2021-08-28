@@ -80,7 +80,7 @@ header nav a {
     position: relative;
 }
 
-.home .section2 .animation_container,
+.home .section2 .finger_animation,
 .home .section1 .header_animation {
     height: 100vh;
     position: relative;
@@ -90,7 +90,7 @@ header nav a {
     background-color: #fff;
 }
 
-.home .section2 .animation_container {
+.home .section2 .finger_animation {
     background-image: url(./images/finger_animation_bg.svg);
 }
 
@@ -107,10 +107,27 @@ header nav a {
 
 /* Canvas styles */
 
-.home .section2 .animation_container #hero-lightpass,
-#ring_zoom {
+.home .section2 .finger_animation #ring_on_finger,
+.home .section1 .header_animation #ring_zoom {
     width: 100%;
     height: 100%;
+}
+
+.home .section2 .translate_text {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    width: 30%;
+    height: 100px;
+    z-index: 2;
+    overflow-y: hidden;
+}
+
+.home .section2 .translate_text p {
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 .home .section1 .text_content,
@@ -144,40 +161,74 @@ header nav a {
 }
 
 
-/* Section 4 */
+/* Section 3 */
 
-.home .section4 {
+.home .section3 {
     display: flex;
     padding: 5% 10%;
 }
 
-.home .section4>* {
+.home .section3>* {
     width: 50%;
 }
 
-.home .section4 .text_container {
+.home .section3 .text_container {
     font-size: 1.2rem;
 }
 
-.home .section4 .text_container .features_container {
+.home .section3 .text_container .features_container {
     display: flex;
     justify-content: space-between;
 }
 
-.home .section4 .text_container h1 {
+.home .section3 .text_container h1 {
     color: #81C103;
     font-size: 3rem;
 }
 
-.home .section4 .text_container .features_container .feature {
+.home .section3 .text_container .features_container .feature {
     display: grid;
     grid-template-rows: 60% 40%;
     align-items: center;
 }
 
-.home .section4 .text_container .features_container .feature img {
+.home .section3 .text_container .features_container .feature img {
     width: 50%;
     height: auto;
+}
+
+
+/* Section 4 */
+
+.home .section4 {
+    height: 100%;
+    margin: 0 10%;
+    background-image: url("./images/omnyk_flickering_bg.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home .section4 .text_content p {
+    color: #81C103;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.home .section4 .text_content .section4_translate_text {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow-y: hidden;
+}
+
+.home .section4 .text_content .section4_translate_text h1 {
+    position: absolute;
+    width: 100%;
+    font-size: 3rem;
+    line-height: 100px;
+    margin: 0;
 }
 
 
@@ -526,14 +577,14 @@ footer .footer_section2 .copywright a {
         width: 80%;
     }
     /* Section 4 */
-    .home .section4 {
+    .home .section3 {
         flex-direction: column;
         padding: 10% 5%;
     }
-    .home .section4>* {
+    .home .section3>* {
         width: 100%;
     }
-    .home .section4 .text_container .features_container .feature img {
+    .home .section3 .text_container .features_container .feature img {
         width: 80%;
         height: auto;
     }

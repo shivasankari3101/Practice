@@ -1,6 +1,6 @@
 //Canvas for finger animation
 
-const canvas = document.getElementById("hero-lightpass");
+const canvas = document.getElementById("ring_on_finger");
 const context = canvas.getContext("2d");
 
 canvas.width = 1158;
@@ -53,7 +53,7 @@ function second_animation() {
             scrollTrigger: {
                 trigger: ".section2",
                 pin: ".section2",
-                scrub: 1,
+                scrub: true,
                 start: "top top"
 
             },
@@ -63,7 +63,17 @@ function second_animation() {
             frame: frameCount - 1,
             snap: "frame",
             onUpdate: render
-        });
+        }, "same1")
+        // .fromTo('.translate_text p', {
+        //     yPercent: 100,
+        // }, {
+        //     yPercent: -150,
+        //     stagger: {
+        //         each: 3
+        //     },
+        //     duration: 2
+        // }, "same1")
+        // .addLabel("same1");
 }
 
 //Header  animation
@@ -105,6 +115,12 @@ function render1() {
 }
 
 
+
+
+
+
+
+
 //Image gallery animation
 const images3 = gsap.utils.toArray(".image");
 
@@ -123,6 +139,8 @@ images3.forEach((image, i) => {
     })
 })
 
+
+
 //Fade in animation of Omnyk stories
 gsap.from(".omnyk_stories", {
     scrollTrigger: {
@@ -133,4 +151,33 @@ gsap.from(".omnyk_stories", {
         ease: "circ.out"
     },
     opacity: 0
+})
+
+
+//Translate text animation for flickering text
+
+const translate_texts = gsap.utils.toArray(".section4_translate_text h1");
+
+
+var t1 = gsap.timeline({
+    scrollTrigger: {
+        pin: ".section4",
+        scrub: 2,
+        ease: "SlowMo"
+    }
+});
+
+translate_texts.forEach((translate_text, i) => {
+    t1.from(translate_text, {
+            opacity: 0,
+            yPercent: 100,
+        })
+        .to(translate_text, {
+            yPercent: 0
+        })
+    if (i < 2) {
+        t1.to(translate_text, {
+            yPercent: -100
+        })
+    }
 })
