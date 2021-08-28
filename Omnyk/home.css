@@ -142,7 +142,6 @@ header nav a {
 
 .home .section1 img {
     background-image: url(./images/omnyk_flickering_bg.svg);
-    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -206,7 +205,6 @@ header nav a {
     height: 100%;
     margin: 0 10%;
     background-image: url("./images/omnyk_flickering_bg.svg");
-    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -588,11 +586,14 @@ footer .footer_section2 .copywright a {
         width: 300%;
         position: static;
     }
+    .home .section1 img {
+        background-size: cover;
+    }
     .home .section1 .text_content h1 {
         font-size: 2.5rem;
         width: 80%;
     }
-    /* Section 4 */
+    /* Section 3 */
     .home .section3 {
         flex-direction: column;
         padding: 10% 5%;
@@ -603,6 +604,10 @@ footer .footer_section2 .copywright a {
     .home .section3 .text_container .features_container .feature img {
         width: 80%;
         height: auto;
+    }
+    /* Section 4 */
+    .home .section4 {
+        background-size: cover;
     }
     /* Section 5 */
     .home .section5 {
