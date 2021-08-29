@@ -1,3 +1,4 @@
+// Omnyk stories carousel
 $('.omnyk_stories_carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -28,6 +29,8 @@ omnyk_working_carousel.owlCarousel({
     }
 })
 
+// Functions for slider icons
+
 $('#left_slider').click(function() {
     omnyk_working_carousel.trigger('prev.owl.carousel', [1000]);
 })
@@ -36,11 +39,16 @@ $('#right_slider').click(function() {
     omnyk_working_carousel.trigger('next.owl.carousel', [1000]);
 })
 
+
+// Loader function
+
 $(window).on('load', function() {
     $('#loader').css("display", "none");
 });
 
 
+
+// The text you add in the heading of section 3 will be split into spans with each letter as inner text by the following js code
 
 var animate_letters = document.getElementsByClassName("animated_text")[0].innerText.split('');
 
@@ -51,12 +59,3 @@ for (var i = 0; i < animate_letters.length; i++) {
     $(".animated_text").append(span);
 
 }
-
-
-// var letters = $('.animated_text span');
-
-// TweenMax.staggerFrom(
-//     letters,
-//     0.25, { opacity: 0, y: 200, ease: Back.easeOut },
-//     0.08
-// );

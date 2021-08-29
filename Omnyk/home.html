@@ -15,9 +15,12 @@
 
 <body class="home">
 
+    <!-- Loader -->
     <div class="loader" id="loader">
         <img src="./images/loader.gif" alt="" srcset="">
     </div>
+
+
     <!-- Navbar -->
     <div class="header">
         <header>
@@ -29,6 +32,8 @@
         </header>
 
     </div>
+
+
 
     <!-- Section 1 -->
     <div class="section1">
@@ -46,18 +51,10 @@
     </div>
 
 
+
     <!-- Section 2 -->
     <div class="section2">
         <div class="finger_animation">
-            <!-- <div id="ecg">
-                Know every
-                <div class="ecg_img">
-
-                    </svg>
-
-                </div>
-                of your life
-            </div> -->
             <canvas id="ring_on_finger"></canvas>
         </div>
         <div class="translate_text">
@@ -68,10 +65,12 @@
     </div>
 
 
+
     <!-- Section 3-->
     <section class="section3">
-        <img src="images/section_3_image.svg" alt="Ring">
+        <img class="section_3_image" src="images/section_3_image.svg" alt="Ring">
         <div class="text_container">
+            <!-- The text you add here in this heading will be split into spans with each letter as inner text -->
             <h1 class="animated_text">Killer technical headline</h1>
             <p>Talk about how technically sound and advanced our product is. Validate by highlighting parts in the sketches below. Ultricies sagittis rhoncus morbi senectus vitae aenean vulputate amet aliquet. </p>
             <div class="features_container">
@@ -104,10 +103,6 @@
             </section>
         </div>
     </section>
-
-
-
-
 
 
 
@@ -173,6 +168,7 @@
     </section>
 
 
+
     <!-- Section 6 -->
     <section class="section6">
         <div class="charger_animation">
@@ -183,6 +179,7 @@
             <p>Laoreet tempor eleifend pellentesque consequat, placerat. Ultricies sagittis rhoncus morbi senectus vitae aenean vulputate amet aliquet. </p>
         </div>
     </section>
+
 
 
     <!-- Picture gallery -->
@@ -227,6 +224,8 @@
         </div>
     </section>
 
+
+
     <!-- Omnyk Working -->
     <section class="omnyk_working">
         <h1>How it works</h1>
@@ -248,9 +247,9 @@
             </div>
             <img src="images/Omnyk_working_arrow.svg" id="right_slider" alt="right_slider">
         </div>
-
-
     </section>
+
+
 
     <!-- Omnyk Stories -->
     <section class="omnyk_stories">
@@ -288,8 +287,9 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -323,13 +323,17 @@
         </div>
     </footer>
 
+    <!-- Gsap  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Owl carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <!-- Custom javascript file -->
     <script src="js/custom.js"></script>
+    <!-- Custom javascript file for gsap code -->
     <script src="js/gsap.js"></script>
 </body>
 

@@ -107,7 +107,7 @@ function header_animation() {
                 end: "bottom bottom",
                 endTrigger: ring_on_finger
             },
-            ease: "circ.out"
+            ease: "power1.inOut"
         })
         .to(finger_imgs1, {
             frame: frameCount1 - 1,
@@ -123,7 +123,7 @@ function header_animation() {
 
 // Ring on finger animation
 function ring_on_finger() {
-    var t2 = gsap.timeline({
+    var t1 = gsap.timeline({
         scrollTrigger: {
             trigger: ".section2",
             pin: ".section2",
@@ -131,9 +131,9 @@ function ring_on_finger() {
             start: "top top"
 
         },
-        ease: "circ.out"
+        ease: "power1.inOut"
     });
-    t2.to(finger_imgs, 20, {
+    t1.to(finger_imgs, 20, {
         frame: frameCount - 1,
         snap: "frame",
         onUpdate: render
@@ -142,22 +142,60 @@ function ring_on_finger() {
     const section2_translate_texts = gsap.utils.toArray(".section2 .translate_text p");
 
     section2_translate_texts.forEach((translate_text, i) => {
-        t2.from(translate_text, 2, {
+        t1.from(translate_text, 4, {
                 opacity: 0,
                 yPercent: 100
             })
-            .to(translate_text, 5, {
+            .to(translate_text, 7, {
                 opacity: 1,
                 yPercent: 0
             })
         if (i < 2) {
-            t2.to(translate_text, 2, {
+            t1.to(translate_text, 4, {
                 yPercent: -100,
                 opacity: 0
             })
         }
     })
 
+}
+
+//Animated text
+
+function animated_text() {
+    var t2 = gsap.timeline({
+        scrollTrigger: {
+            pin: ".section3",
+            scrub: true,
+            end: "center top"
+        }
+    });
+    t2.from(".section_3_image", {
+            opacity: 0,
+            scale: 0.8
+        }, "same1")
+        .fromTo(".animated_text span", {
+            opacity: 0
+        }, {
+            duration: 1,
+            opacity: 1,
+            ease: "power1.inOut",
+            stagger: {
+                amount: 1
+            }
+        }, "same1")
+        .from(".text_container p", {
+            opacity: 0,
+            scale: 0.8
+        }, "same1")
+        .from(".feature", {
+            scale: 0.7,
+            opacity: 0,
+            ease: "Bounce.easeIn",
+            stagger: {
+                amount: 1
+            }
+        }, "same1")
 }
 
 
@@ -167,7 +205,7 @@ function translate_text_flickering() {
     const translate_texts = gsap.utils.toArray(".section4_translate_text h1");
 
 
-    var t1 = gsap.timeline({
+    var t3 = gsap.timeline({
         scrollTrigger: {
             pin: ".section4",
             scrub: 3,
@@ -176,7 +214,7 @@ function translate_text_flickering() {
     });
 
     translate_texts.forEach((translate_text, i) => {
-        t1.from(translate_text, {
+        t3.from(translate_text, {
                 opacity: 0,
                 yPercent: 100,
             })
@@ -184,7 +222,7 @@ function translate_text_flickering() {
                 yPercent: 0
             })
         if (i < 2) {
-            t1.to(translate_text, {
+            t3.to(translate_text, {
                 yPercent: -100
             })
         }
@@ -201,7 +239,7 @@ function ring_on_charger() {
                 scrub: 1,
                 start: "top top"
             },
-            ease: "circ.out",
+            ease: "power1.inOut",
             endTrigger: gallery_animation
         })
         .to(finger_imgs2, {
@@ -228,7 +266,7 @@ function gallery_animation() {
             opacity: 0,
             scale: 0.95,
             yPercent: -20,
-            ease: "circ.out"
+            ease: "power1.inOut"
         })
     })
 }
@@ -243,7 +281,7 @@ function omnyk_stories() {
             scrub: 3,
             start: "top center",
             end: "top center",
-            ease: "circ.out"
+            ease: "power1.inOut"
         },
         opacity: 0
     })
@@ -252,8 +290,15 @@ function omnyk_stories() {
 
 
 header_animation(); //Header animation
+
 ring_on_finger(); //Ring on finger animation
+
+animated_text(); //Animated text
+
 translate_text_flickering(); //Translate text in flickering section
+
 ring_on_charger(); //Ring on charger animation
+
 gallery_animation(); //Gallery animation
+
 omnyk_stories(); //Fade in animation of Omnyk stories

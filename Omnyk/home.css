@@ -643,6 +643,7 @@ footer .footer_section2 .copywright a {
         width: 100%;
         padding: 3%;
         left: 0;
+        top: 75%;
         font-size: 1.1rem;
     }
     /* Section 3 */
@@ -660,6 +661,9 @@ footer .footer_section2 .copywright a {
     /* Section 4 */
     .home .section4 {
         background-size: cover;
+    }
+    .home .section4 .text_content p {
+        font-size: 2rem;
     }
     /* Section 5 */
     .home .section5 {
