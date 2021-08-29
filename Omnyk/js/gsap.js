@@ -97,30 +97,32 @@ function render2() {
 
 
 //Header  animation
-gsap.timeline({
-        scrollTrigger: {
-            scrub: true,
-            trigger: ".section1",
-            pin: ".section1",
-            start: "top top",
-            end: "bottom bottom",
-            endTrigger: second_animation
-        },
-        ease: "circ.out"
-    })
-    .to(finger_imgs1, {
-        frame: frameCount1 - 1,
-        snap: "frame",
-        onUpdate: render1,
-    }, "same")
-    .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
-    .to(".header_animation", { opacity: 0 })
-    .fromTo(".section1 img", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 0.8 })
-    .to("header", { yPercent: -100 });
+function header_animation() {
+    gsap.timeline({
+            scrollTrigger: {
+                scrub: true,
+                trigger: ".section1",
+                pin: ".section1",
+                start: "top top",
+                end: "bottom bottom",
+                endTrigger: ring_on_finger
+            },
+            ease: "circ.out"
+        })
+        .to(finger_imgs1, {
+            frame: frameCount1 - 1,
+            snap: "frame",
+            onUpdate: render1,
+        }, "same")
+        .fromTo(".section1 .text_content", { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -40 }, "same")
+        .to(".header_animation", { opacity: 0 })
+        .fromTo(".section1 img", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 0.8 })
+        .to("header", { yPercent: -100 });
+}
 
 
 // Ring on finger animation
-function second_animation() {
+function ring_on_finger() {
     var t2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".section2",
@@ -159,7 +161,58 @@ function second_animation() {
 }
 
 
-//Image gallery animation
+//Translate text animation for flickering text
+
+function translate_text_flickering() {
+    const translate_texts = gsap.utils.toArray(".section4_translate_text h1");
+
+
+    var t1 = gsap.timeline({
+        scrollTrigger: {
+            pin: ".section4",
+            scrub: 3,
+            ease: "SlowMo"
+        }
+    });
+
+    translate_texts.forEach((translate_text, i) => {
+        t1.from(translate_text, {
+                opacity: 0,
+                yPercent: 100,
+            })
+            .to(translate_text, {
+                yPercent: 0
+            })
+        if (i < 2) {
+            t1.to(translate_text, {
+                yPercent: -100
+            })
+        }
+    })
+}
+
+
+// Ring on charger function
+function ring_on_charger() {
+    gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section6",
+                pin: ".section6",
+                scrub: 1,
+                start: "top top"
+            },
+            ease: "circ.out",
+            endTrigger: gallery_animation
+        })
+        .to(finger_imgs2, {
+            frame: frameCount2 - 1,
+            snap: "frame",
+            onUpdate: render2
+        })
+}
+
+
+//Gallery animation
 function gallery_animation() {
 
     const images3 = gsap.utils.toArray(".image");
@@ -196,54 +249,11 @@ function omnyk_stories() {
     })
 }
 
-omnyk_stories();
 
 
-//Translate text animation for flickering text
-
-const translate_texts = gsap.utils.toArray(".section4_translate_text h1");
-
-
-var t1 = gsap.timeline({
-    scrollTrigger: {
-        pin: ".section4",
-        scrub: 3,
-        ease: "SlowMo"
-    }
-});
-
-translate_texts.forEach((translate_text, i) => {
-    t1.from(translate_text, {
-            opacity: 0,
-            yPercent: 100,
-        })
-        .to(translate_text, {
-            yPercent: 0
-        })
-    if (i < 2) {
-        t1.to(translate_text, {
-            yPercent: -100
-        })
-    }
-})
-
-
-// Ring on charger function
-gsap.timeline({
-        scrollTrigger: {
-            trigger: ".section6",
-            pin: ".section6",
-            scrub: 1,
-            start: "top top"
-        },
-        ease: "circ.out",
-        endTrigger: gallery_animation
-    })
-    .to(finger_imgs2, {
-        frame: frameCount2 - 1,
-        snap: "frame",
-        onUpdate: render2
-    })
-
-
-gallery_animation()
+header_animation(); //Header animation
+ring_on_finger(); //Ring on finger animation
+translate_text_flickering(); //Translate text in flickering section
+ring_on_charger(); //Ring on charger animation
+gallery_animation(); //Gallery animation
+omnyk_stories(); //Fade in animation of Omnyk stories
