@@ -113,7 +113,7 @@ header nav a {
     height: 100%;
 }
 
-.home .section2 .finger_animation #ecg {
+.home .section2 #ecg {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,15 +126,10 @@ header nav a {
     font-size: 1.2rem;
 }
 
-.home .section2 .finger_animation #ecg .ecg_img {
-    width: 182px;
-    height: 156px;
+.home .section2 #ecg .ecg_img {
+    width: auto;
+    height: 175px;
     overflow-x: hidden;
-}
-
-.home .section2 .finger_animation #ecg .ecg_img img {
-    width: 100%;
-    height: 100%;
 }
 
 .home .section2 .translate_text {
