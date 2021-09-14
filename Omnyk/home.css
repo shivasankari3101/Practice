@@ -464,13 +464,15 @@ header nav a {
 }
 
 .home .omnyk_working .omnyk_working_container>img#right_slider {
-    bottom: 50%;
-    left: 66%;
+    bottom: 70%;
+    right: 0%;
 }
 
 .home .omnyk_working .omnyk_working_container>img#left_slider {
-    left: 32%;
-    top: 10%;
+    height: 2.8em;
+    width: 2.8em;
+    margin-top: -29em; 
+    padding-right: 1.5em;
 }
 
 .home .omnyk_working .omnyk-working-carousel .item {
@@ -720,10 +722,10 @@ footer .footer_section2 .copywright a {
         cursor: pointer;
     }
     .home .omnyk_working .omnyk_working_container>img#left_slider {
-        top: 30%;
-        bottom: auto;
+        top: 92%;
+        /*bottom: auto;*/
         left: 10px;
-        transform: rotateY(180deg);
+        /*transform: rotateY(180deg);*/
         cursor: pointer;
     }
     .home .omnyk_working .omnyk-working-carousel .item {
