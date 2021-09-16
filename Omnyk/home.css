@@ -223,7 +223,7 @@ header nav a {
 .home .section4 {
     height: 100%;
     margin: 0 10%;
-    background-image: url("images/Particles rising.svg");
+    background-image: url("./images/omnyk_flickering_bg.svg");
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
