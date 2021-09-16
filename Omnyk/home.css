@@ -120,7 +120,6 @@ header nav a {
     justify-content: center;
     position: absolute;
     top: 3%;
-    left: 0;
     width: 100%;
     color: #fff;
     font-size: 1.2rem;
@@ -135,7 +134,6 @@ header nav a {
 .home .section2 .translate_text {
     position: absolute;
     top: calc(100% - 125px);
-    left: 10%;
     width: 40%;
     height: 100px;
     z-index: 2;
