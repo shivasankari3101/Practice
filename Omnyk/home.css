@@ -425,7 +425,10 @@ header nav a {
 }
 
 .home .picture_gallery .column2,
-.home .picture_gallery .column4 {
+.home .picture_gallery .column4,
+.home .picture_gallery .column5
+.home .picture_gallery .column6
+{
     justify-content: center;
 }
 
