@@ -75,7 +75,12 @@ header nav a {
 
 /* Header animations */
 .home .section1 {
-    background-image: url(./images/Green_wave.svg);
+        width: 100%;
+        position: relative;
+        background-image: url(./images/Green_wave.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
 }
 
 .home .section2 .finger_animation,
